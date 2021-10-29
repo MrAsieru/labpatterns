@@ -5,8 +5,8 @@ import java.util.Comparator;
 import domain.Symptom;
 import domain.Symptom;
 
-public class severityIndex implements Comparator<Symptom>{
-	public int compare(Symptom arg0, Symptom arg1) {
-		return (arg0.getSeverityIndex()<arg1.getSeverityIndex()) ? 0 : 1;
+public class severityIndex implements Comparator<Object>{
+	public int compare(Object arg0, Object arg1) {
+		return ( ((Symptom)arg0).getSeverityIndex() - ((Symptom)arg1).getSeverityIndex() );
 	}
 }

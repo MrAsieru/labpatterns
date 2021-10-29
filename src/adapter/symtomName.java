@@ -4,8 +4,8 @@ import java.util.Comparator;
 
 import domain.Symptom;
 
-public class symtomName implements Comparator<Symptom>{
-	public int compare(Symptom arg0, Symptom arg1) {
-		return (arg0.getName().compareTo(arg1.getName()))<=0 ? 0 : 1;
+public class symtomName implements Comparator<Object>{
+	public int compare(Object arg0, Object arg1) {
+		return ((Symptom)arg0).getName().compareTo( ((Symptom)arg1).getName() );
 	}
 }
